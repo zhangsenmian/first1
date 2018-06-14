@@ -116,6 +116,16 @@ public class ShopService {
 	return null;
 	   
    }
+   
+   public List<Shop> findShopsByName(String name){
+	   try {
+		return shopDao.findShopsByName(name);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return null;
+   }
    /*
    public void delAllShops(String[] ids){
 	   try {

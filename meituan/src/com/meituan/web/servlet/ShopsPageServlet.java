@@ -19,13 +19,32 @@ public class ShopsPageServlet extends HttpServlet {
 	int pageSize = 16;
 		
 		int currentPage = 1;
+		//String category="精选小吃";
 		
-		String category=request.getParameter("category");
-	//	category = new String(category.getBytes("iso-8859-1"),"UTF-8");
-		System.out.println(category);
-		if(category==null){
-			category="";
+		 String category=request.getParameter("category");
+		 if(category==null){
+				category="";
+			}
+		if(category.equals("1")){
+			
+			category="美食";
 		}
+		if(category.equals("2")){
+			category="超市";
+		}
+		if(category.equals("3")){
+			category="鲜果购";
+		}
+		if(category.equals("4")){
+			category="精选小吃";
+		}
+		if(category.equals("5")){
+			category="下午茶";
+		}
+	//	category = new String(category.getBytes("iso-8859-1"),"UTF-8");
+		//	美食	超市	精选小吃	鲜果购	下午茶
+	
+		
 		String currPage = request.getParameter("currentPage");
 		if(currPage!=null&&!"".equals(currPage)){
 			currentPage = Integer.parseInt(currPage);

@@ -129,6 +129,12 @@ public class ShopDao {
     	return qr.query("select * from Shop where category = ?", new BeanListHandler<Shop>(Shop.class),category);
     	
     }
+    
+    public List<Shop> findShopsByName(String name) throws SQLException{
+    	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+    	return qr.query("select * from Shop where name = ?", new BeanListHandler<Shop>(Shop.class),name);
+    }
+    
     /*
     public void delAllShops(String[] ids) throws SQLException{
     	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
@@ -140,6 +146,7 @@ public class ShopDao {
     	qr.batch("delete from Shop where id =?",params);
     }
     
+     */
     
    
 //    public List<Shop>  searchShop(String id,String category,String name,String minprice,String maxprice) throws SQLException{
@@ -177,7 +184,7 @@ public class ShopDao {
  
 	
 
-       
+       /*
 
 		  public List<Object> findShopsName(String name) throws SQLException{
 		    	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
