@@ -69,7 +69,7 @@ a{text-decoration:none}
  font-size: 11px;
 }
 
-#login-mobile,#login-verify-code,#btn{
+.login-mobile,#login-verify-code,#btn{
       width:270px;
       height:35px;
  

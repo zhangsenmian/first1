@@ -19,6 +19,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 	<link rel="stylesheet" type="text/css" href="css/adminlogin.css">
 
+<script>
+function check(){
+		var username = document.getElementById("login-mobile").value;
+		var password = document.getElementById("login-verify-code").value;
+		if(username == ''){
+			alert("用户名不能为空");
+			return false;
+		}
+		else if(password == ''){
+			alert("密码不能为空");
+			return false;
+		}
+		else 
+			return true;
+	}
+</script>
 
   </head>
   
@@ -38,7 +54,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          <div  id="divmid2">
                     <br><br>
           <span id="divmid11">商家登录</span> <br><br>
-          <form method="post" action="BusinessLoginServlet">
+          <form method="post" action="BusinessLoginServlet" onsubmit="return check()">
           <span><input id="login-mobile"  name="business_name" value="" placeholder="请输入用户名" type="text"></span><br><br>
           <span><input name="business_password" id="login-verify-code" autocomplete="off" value="" placeholder="请输入密码" type="password"></span><br><br>
           <span><input id="btn" name="" value="登录" type="submit"></span><br><br>

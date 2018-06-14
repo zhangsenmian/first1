@@ -1,8 +1,6 @@
 package com.meituan.web.servlet;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,13 +10,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
 
 import com.meituan.damian.User;
-import com.meituan.exception.UserException;
 import com.meituan.service.UserService;
+import com.meituan.util.UUIDUtil;
 
 
 
-public class RegisterServlet extends HttpServlet {
+public class userRegisterServlet extends HttpServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
       /*  String ckcode=request.getParameter("ckcode");
@@ -28,48 +30,33 @@ public class RegisterServlet extends HttpServlet {
         	request.getRequestDispatcher("/register.jsp").forward(request, response);
         	return;
         }*/ 
+		//1.设置字符编码
+		request.setCharacterEncoding("utf-8");
+		//2.获取数据
 		User user = new User();
+		boolean flag = false;
 		try {
 			BeanUtils.populate(user, request.getParameterMap());
-
+			user.setId(UUIDUtil.getUUID());
+			//3.调用模型
 			UserService us = new UserService();
-			us.regist(user);
-			
-			request.getRequestDispatcher("/registersuccess.jsp").forward(request, response);
-		}catch(UserException e){
-			request.setAttribute("user_msg", e.getMessage());
-			request.getRequestDispatcher("/register.jsp").forward(request, response);
-			return;
+			flag = us.regist(user);
+			if(flag){
+				//注册成功
+				request.getRequestDispatcher("/registersuccess.jsp").forward(request, response);
+			}else{
+				//注册失败
+				request.getRequestDispatcher("/register.jsp").forward(request, response);
+			}
 		}catch (Exception e) {
 			e.printStackTrace();
-			
-		}
-		
-	
-        
+		} 
 	}
       
-	
-	/**
-	 * The doPost method of the servlet. <br>
-	 *
-	 * This method is called when a form has its tag value method equals to post.
-	 * 
-	 * @param request the request send by the client to the server
-	 * @param response the response send by the server to the client
-	 * @throws ServletException if an error occurred
-	 * @throws IOException if an error occurred
-	 */
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
-
-	/**
-	 * Initialization of the servlet. <br>
-	 *
-	 * @throws ServletException if an error occurs
-	 */
 	public void init() throws ServletException {
 		// Put your code here
 	}
