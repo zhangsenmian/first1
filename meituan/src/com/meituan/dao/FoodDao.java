@@ -25,7 +25,12 @@ public class FoodDao {
 	   return qr.query("select * from food where shopid = ?", new BeanListHandler<Food>(Food.class),id);
   }
    
-
+   public List<Food> addFood(Food Food) throws SQLException{
+	   	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+	   	qr.update("insert into Food values(?,?,?,?)",Food.getFid(),Food.getFoodname(),Food.getFoodprice(),Food.getImg_url());
+			return null;
+	       
+	   }
 	
 	
 	/* public List<Food> findAllFoods() throws SQLException{
@@ -34,12 +39,7 @@ public class FoodDao {
     	
     }
     
-     public List<Food> addFood(Food Food) throws SQLException{
-   	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
-   	qr.update("insert into Food values(?,?,?,?)",Food.getFid(),Food.getFoodname(),Food.getFoodprice(),Food.getImg_url());
-		return null;
-       
-   }
+    
     
     
     

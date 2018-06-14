@@ -118,7 +118,7 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="8%">${b.foodprice }</td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="8%"><img width="22px" height="22px" src="${pageContext.request.contextPath}${b.img_url }"></td>
+										width="8%"><img width="110px" height="50px" src="${pageContext.request.contextPath}${b.img_url }"></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="8%">${b.shopid }</td>
 								

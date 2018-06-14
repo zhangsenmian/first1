@@ -21,6 +21,14 @@ public class FoodService {
 	return null;
   }
   
+  public void addFood(Food food){
+	   try {
+		foodDao.addFood(food);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+  }
    /*public List<Food> findAllFoods(){
 	   try {
 		return FoodDao.findAllFoods();
@@ -31,14 +39,7 @@ public class FoodService {
 	return null;
    }
    
-  public void addFood(Food Food){
-	   try {
-		FoodDao.addFood(Food);
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-   }
+ 
    
     public Food findFoodById(String id){
 	  try {

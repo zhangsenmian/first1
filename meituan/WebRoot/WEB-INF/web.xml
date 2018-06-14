@@ -172,4 +172,14 @@
     <servlet-name>FindAllShopsTwoServlet</servlet-name>
     <url-pattern>/FindAllShopsTwoServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddFoodServlet</display-name>
+    <servlet-name>AddFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.AddFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddFoodServlet</servlet-name>
+    <url-pattern>/AddFoodServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
