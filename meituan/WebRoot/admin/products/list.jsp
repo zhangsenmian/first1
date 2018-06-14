@@ -112,7 +112,7 @@
 								<td align="center" width="9%">商品起送价格</td>
 								
 								<td width="8%" align="center">商店类别</td>
-								<td width="8%" align="center">商品管理</td>
+								<td width="8%" align="center">商店首图</td>
 								<td width="8%" align="center">编辑</td>
 
 								<td width="8%" align="center">删除</td>
@@ -131,12 +131,8 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="8%">${b.category }</td>
 										
-									<td align="center" style="HEIGHT: 22px" width="7%"><a
-										href="${pageContext.request.contextPath }/FindFoodByid?id=${b.id }">
-											<img
-											src="${pageContext.request.contextPath}/admin/images/i_edit.gif"
-											border="0" style="CURSOR: hand"> </a>
-									</td>
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="8%"><img width="110px" height="50px" src="${pageContext.request.contextPath }/upload/${b.img_url}"></td>
 									
 									<td align="center" style="HEIGHT: 22px" width="7%"><a
 										href="${pageContext.request.contextPath }/servlet/FindShopByIdServlet?id=${b.id }">

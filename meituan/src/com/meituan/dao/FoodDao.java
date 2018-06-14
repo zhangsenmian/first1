@@ -27,12 +27,60 @@ public class FoodDao {
    
    public List<Food> addFood(Food Food) throws SQLException{
 	   	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
-	   	qr.update("insert into Food values(?,?,?,?)",Food.getFid(),Food.getFoodname(),Food.getFoodprice(),Food.getImg_url());
+	   	qr.update("insert into Food values(?,?,?,?,?)",Food.getFid(),Food.getFoodname(),Food.getFoodprice(),Food.getImg_url(),Food.getShopid());
 			return null;
 	       
 	   }
 	
+   
+   public void updateFood(Food Food) throws SQLException {
+		QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
+		qr.update("update Food set foodname=?,foodprice=?,img_url=? where fid=?",
+				Food.getFoodname(),Food.getFoodprice(),Food.getImg_url(),Food.getFid());
+		
+
+	}
+  
+   public Food findFoodByMyId(String id)throws SQLException{
+	   QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+	   return qr.query("select * from food where fid = ?", new BeanHandler<Food>(Food.class),id);
+  }
+   
+   
+   public void deleteFood(String id) throws SQLException{
+   	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+   	qr.update("delete from Food where fid =?",id);
+   }
+   
+   public List<Food> searchFood(String id,  String name,
+			String minprice, String maxprice) throws SQLException {
+		QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
+		String sql = "select * from Food where 1=1";
+		List list = new ArrayList();
+		if(!"".equals(id.trim())){
+			sql+=" and fid like ?"; // 
+			list.add("%"+id.trim()+"%");// 
+		}
+		
+		
+		
+		if(!"".equals(name.trim())){
+			sql+=" and foodname like ?";
+			list.add("%"+name.trim()+"%");
+		}
+		
+		if(!"".equals(minprice.trim())){
+			sql+=" and foodprice>?";
+			list.add(minprice.trim());
+		}
+		if(!"".equals(maxprice.trim())){
+			sql+=" and foodprice< ?";
+			list.add(maxprice.trim());
+		}
 	
+		return qr.query(sql, new BeanListHandler<Food>(Food.class),list.toArray());
+   }
+   
 	/* public List<Food> findAllFoods() throws SQLException{
     	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
     	return qr.query("select * from Food", new BeanListHandler<Food>(Food.class));
@@ -44,55 +92,11 @@ public class FoodDao {
     
     
     
-    public void updateFood(Food Food) throws SQLException {
-		QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-		qr.update("update Food set name=?,startprice=?,category=?img_url=?where id=?",
-				Food.getName(),Food.getStartprice(),Food.getCategory(),Food.getId(),Food.getImg_url());
-		
-
-	}
    
  
-    public void deleteFood(String id) throws SQLException{
-    	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
-    	qr.update("delete from Food where id =?",id);
-    }
+   
     
-    public List<Food> searchFood(String id, String category, String name,
-			String minprice, String maxprice) throws SQLException {
-		QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-		String sql = "select * from Food where 1=1";
-		List list = new ArrayList();
-		if(!"".equals(id.trim())){
-			sql+=" and id like ?"; // 
-			list.add("%"+id.trim()+"%");// 
-		}
-		
-		if(!"".equals(category.trim())){
-			sql+=" and category=?";
-			list.add(category.trim());
-		}
-		
-		if(!"".equals(name.trim())){
-			sql+=" and name like ?";
-			list.add("%"+name.trim()+"%");
-		}
-		
-		if(!"".equals(minprice.trim())){
-			sql+=" and startprice>?";
-			list.add(minprice.trim());
-		}
-		if(!"".equals(maxprice.trim())){
-			sql+=" and startprice< ?";
-			list.add(maxprice.trim());
-		}
-		System.out.print("11111111111111111");
-    	System.out.print(sql);    	
-    	System.out.print(minprice);
-     	System.out.print(list.toArray());
-		return qr.query(sql, new BeanListHandler<Food>(Food.class),list.toArray());
-     	// qr.query(sql, new BeanListHandler<Food>(Food.class),("%"+id.trim()+"%"),category.trim(),("%"+name.trim()+"%"),minprice.trim(),maxprice.trim());
-	}*/
+   */
     
     /*public List<Food> findFoodsPage(int currentPage,int pageSize) throws SQLException{
     	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());

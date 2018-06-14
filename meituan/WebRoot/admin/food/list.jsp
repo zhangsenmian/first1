@@ -10,12 +10,12 @@
 	src="${pageContext.request.contextPath}/admin/js/public.js"></script>
 <script type="text/javascript">
 	function addProduct() {
-		window.location.href = "${pageContext.request.contextPath}/admin/products/add.jsp";
+		window.location.href = "${pageContext.request.contextPath}/admin/food/add.jsp";
 	}
 	
 	function delbook(id,name){
 	  if(confirm("是否确定删除<<"+name+">>吗?")){
-	    location.href="${pageContext.request.contextPath}/servlet/DelShopServlet?id="+id; 
+	    location.href="${pageContext.request.contextPath}/DelFoodServlet?id="+id; 
 	  }
 	}
 </script>
@@ -23,8 +23,9 @@
 <body>
 	<br>
 	<form id="Form1" name="Form1"
-		action="${pageContext.request.contextPath}/servlet/SearchShopServlet"
+		action="${pageContext.request.contextPath}/SearchFoodServlet"
 		method="post"  >
+		
 		<table cellSpacing="1" cellPadding="0" width="100%" align="center"
 			bgColor="#f5fafe" border="0">
 			<TBODY>
@@ -118,12 +119,12 @@
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="8%">${b.foodprice }</td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
-										width="8%"><img width="110px" height="50px" src="${pageContext.request.contextPath}${b.img_url }"></td>
+										width="8%"><img width="110px" height="50px" src="${pageContext.request.contextPath }/upload/${b.img_url}"></td>
 										<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="8%">${b.shopid }</td>
 								
 									<td align="center" style="HEIGHT: 22px" width="7%"><a
-										href="${pageContext.request.contextPath }/servlet/FindShopByIdServlet?id=${b.fid }">
+										href="${pageContext.request.contextPath }/FindFoodByMyId?id=${b.fid }">
 											<img
 											src="${pageContext.request.contextPath}/admin/images/i_edit.gif"
 											border="0" style="CURSOR: hand"> </a>

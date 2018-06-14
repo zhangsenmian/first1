@@ -69,7 +69,7 @@
 			<tr>
 				<td align="center" bgColor="#f5fafe" class="ta_01">商店图片：</td>
 				<td class="ta_01" bgColor="#ffffff" colSpan="3"><input
-					type="file" name="upload" size="30" value="" /></td>
+					type="file" name="img_url" size="30" value="" /></td>
 			</tr>
 			
 			<TR>

@@ -37,7 +37,9 @@ public class FindFoodByid extends HttpServlet {
 	
 		if(list!=null){
 			 System.out.println(list);
+			 request.getSession().setAttribute("shopid", id);
 			request.setAttribute("Foods", list);
+			
 			request.getRequestDispatcher("/admin/food/list.jsp").forward(request, response);
 		}
 	}

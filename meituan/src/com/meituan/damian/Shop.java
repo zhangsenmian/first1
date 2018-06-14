@@ -7,6 +7,14 @@ public class Shop {
     private String category;
     private double startprice;
     private String img_url;
+    private String business_id;
+	
+	public String getBusiness_id() {
+		return business_id;
+	}
+	public void setBusiness_id(String business_id) {
+		this.business_id = business_id;
+	}
 	public String getId() {
 		return id;
 	}

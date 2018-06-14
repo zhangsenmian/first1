@@ -29,6 +29,43 @@ public class FoodService {
 		e.printStackTrace();
 	}
   }
+  
+  public void updateFood(Food Food) {
+		try {
+			foodDao.updateFood(Food);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+  
+  public Food findFoodByMyId(String id){
+	  try {
+		return foodDao.findFoodByMyId(id);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return null;
+  }
+  
+  public void deleteFood(String id){
+	   try {
+		foodDao.deleteFood(id);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+  }
+  
+  public List<Food>  searchFood(String id,String name,String minprice,String maxprice){
+	   try {
+		return foodDao.searchFood(id,name,minprice,maxprice);
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	return null;
+  }
    /*public List<Food> findAllFoods(){
 	   try {
 		return FoodDao.findAllFoods();
@@ -51,32 +88,11 @@ public class FoodService {
 	return null;
    }
     
-   public void updateFood(Food Food) {
-		try {
-			FoodDao.updateFood(Food);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
    
-   public void deleteFood(String id){
-	   try {
-		FoodDao.deleteFood(id);
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-   }
    
-   public List<Food>  searchFood(String id,String category,String name,String minprice,String maxprice){
-	   try {
-		return FoodDao.searchFood(id,category,name,minprice,maxprice);
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return null;
-   }*/
+  
+   
+  */
    
   /* public PageBean findFoodsPage(int currentPage, int pageSize) {
 		// TODO Auto-generated method stub

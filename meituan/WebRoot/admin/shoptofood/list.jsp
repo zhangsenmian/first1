@@ -10,7 +10,7 @@
 	src="${pageContext.request.contextPath}/admin/js/public.js"></script>
 <script type="text/javascript">
 	function addProduct() {
-		window.location.href = "${pageContext.request.contextPath}/admin/products/add.jsp";
+		window.location.href = "${pageContext.request.contextPath}/admin/food/add.jsp";
 	}
 	
 	function delbook(id,name){

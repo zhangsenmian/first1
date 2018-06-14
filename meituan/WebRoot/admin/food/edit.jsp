@@ -29,10 +29,10 @@
 </HEAD>
 <body  onload="setProductCategory('${shop.category}')">
 	<form id="userAction_save_do" name="Form1"
-		action="${pageContext.request.contextPath }/servlet/EditShopServlet" method="post"
+		action="${pageContext.request.contextPath }/EditFoodServlet" method="post"
 		 enctype="multipart/form-data">
 		<input type="hidden"
-					name="id"  value="${shop.id }" />
+					           name="fid"  value="${food.fid }" />
 <!--	enctype="multipart/form-data"  --><!--   图片加上-->
 <table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
@@ -43,33 +43,20 @@
 
 
 			<tr>
-				<td align="center" bgColor="#f5fafe" class="ta_01">商店名称：</td>
+				<td align="center" bgColor="#f5fafe" class="ta_01">商品名称：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
-					name="name" class="bg" value="${shop.name }" /></td>
-				<td align="center" bgColor="#f5fafe" class="ta_01">商店起送价格：</td>
+					name="foodname" class="bg" value="${food.foodname }" /></td>
+				<td align="center" bgColor="#f5fafe" class="ta_01">商品价格：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
-					name="startprice" class="bg" value="${shop.startprice }" /></td>
+					name="foodprice" class="bg" value="${food.foodprice }" /></td>
 			</tr>
-			<tr>
-				
-				<td align="center" bgColor="#f5fafe" class="ta_01">商店类别：</td>
-				<td class="ta_01" bgColor="#ffffff"><select name="category"
-					id="category">
-						<option value="" selected="selected">--选择商店类别--</option>
-						<option value="美食">美食</option>
-						<option value="正餐优选">正餐优选</option>
-						<option value="超市">超市</option>					
-						<option value="精选小吃">精选小吃</option>
-						<option value="鲜果购">鲜果购</option>
-						<option value="下午茶">下午茶</option>
-				</select></td>
-			</tr>
+		
 
 
 			<tr>
 				<td align="center" bgColor="#f5fafe" class="ta_01">商店图片：</td>
 				<td class="ta_01" bgColor="#ffffff" colSpan="3"><input
-					type="file" name="upload" size="30" value="" /></td>
+					type="file" name="img_url" size="30" value="" /></td>
 			</tr>
 			
 			<TR>

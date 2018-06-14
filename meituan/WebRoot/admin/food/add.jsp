@@ -11,43 +11,31 @@
 
 <body>
 	<form id="userAction_save_do" name="Form1"
-		action="${pageContext.request.contextPath}/servlet/AddShopServlet" method="post"
+		action="${pageContext.request.contextPath}/AddFoodServlet" method="post"
 		 enctype="multipart/form-data">
 		&nbsp;
+		<input type="hidden" name="shopid" value="${shopid }">
 		<table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
 			<tr>
 				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
-					height="26"><strong><STRONG>添加商店</STRONG> </strong>
+					height="26"><strong><STRONG>添加商品</STRONG> </strong>
 				</td>
 			</tr>
 
 
 			<tr>
-				<td align="center" bgColor="#f5fafe" class="ta_01">商店名称：</td>
+				<td align="center" bgColor="#f5fafe" class="ta_01">商品名称：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
-					name="name" class="bg"/>
+					name="foodname" class="bg"/>
 				</td>
-				<td align="center" bgColor="#f5fafe" class="ta_01">商店起送价格：</td>
+				<td align="center" bgColor="#f5fafe" class="ta_01">商品价格：</td>
 				<td class="ta_01" bgColor="#ffffff"><input type="text"
-					name="startprice" 
+					name="foodprice" 
 					class="bg" />
 				</td>
 			</tr>
-			<tr>
-				<td align="center" bgColor="#f5fafe" class="ta_01">商店类别：</td>
-				<td class="ta_01" bgColor="#ffffff"><select name="category"
-					id="category">
-						<option value="" selected="selected">--选择商店类别--</option>
-						<option value="美食">美食</option>
-						<option value="正餐优选">正餐优选</option>
-						<option value="超市">超市</option>					
-						<option value="精选小吃">精选小吃</option>
-						<option value="鲜果购">鲜果购</option>
-						<option value="下午茶">下午茶</option>
-				</select>
-				</td>
-			</tr>
+			
 
 
 			<tr>

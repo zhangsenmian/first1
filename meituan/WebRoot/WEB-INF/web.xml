@@ -182,4 +182,54 @@
     <servlet-name>AddFoodServlet</servlet-name>
     <url-pattern>/AddFoodServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditFoodServlet</display-name>
+    <servlet-name>EditFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.EditFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditFoodServlet</servlet-name>
+    <url-pattern>/EditFoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByIdServlet</display-name>
+    <servlet-name>FindFoodByIdServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByIdServlet</servlet-name>
+    <url-pattern>/FindFoodByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByMyId</display-name>
+    <servlet-name>FindFoodByMyId</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByMyId</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByMyId</servlet-name>
+    <url-pattern>/FindFoodByMyId</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DelFoodServlet</display-name>
+    <servlet-name>DelFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.DelFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelFoodServlet</servlet-name>
+    <url-pattern>/DelFoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchFoodServlet</display-name>
+    <servlet-name>SearchFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.SearchFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchFoodServlet</servlet-name>
+    <url-pattern>/SearchFoodServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

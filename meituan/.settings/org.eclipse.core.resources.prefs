@@ -3,3 +3,5 @@ encoding//WebRoot/index.jsp=UTF-8
 encoding//src/com/meituan/web/filter/EncodingFilter.java=UTF-8
 encoding//src/com/meituan/web/servlet/AddFoodServlet.java=UTF-8
 encoding//src/com/meituan/web/servlet/AddShopServlet.java=UTF-8
+encoding//src/com/meituan/web/servlet/EditFoodServlet.java=UTF-8
+encoding//src/com/meituan/web/servlet/EditShopServlet.java=UTF-8
