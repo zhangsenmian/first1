@@ -144,6 +144,7 @@
   </welcome-file-list>
   <servlet>
     <description></description>
+<<<<<<< HEAD
     <display-name>BusinessRegistServlet</display-name>
     <servlet-name>BusinessRegistServlet</servlet-name>
     <servlet-class>com.meituan.web.servlet.BusinessRegistServlet</servlet-class>
@@ -221,5 +222,94 @@
   <servlet-mapping>
     <servlet-name>JSONServlet3</servlet-name>
     <url-pattern>/JSONServlet3</url-pattern>
+=======
+    <display-name>FindShopsByName</display-name>
+    <servlet-name>FindShopsByName</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindShopsByName</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindShopsByName</servlet-name>
+    <url-pattern>/FindShopsByName</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByid</display-name>
+    <servlet-name>FindFoodByid</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByid</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByid</servlet-name>
+    <url-pattern>/FindFoodByid</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindAllShopsTwoServlet</display-name>
+    <servlet-name>FindAllShopsTwoServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindAllShopsTwoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindAllShopsTwoServlet</servlet-name>
+    <url-pattern>/FindAllShopsTwoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddFoodServlet</display-name>
+    <servlet-name>AddFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.AddFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddFoodServlet</servlet-name>
+    <url-pattern>/AddFoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditFoodServlet</display-name>
+    <servlet-name>EditFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.EditFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditFoodServlet</servlet-name>
+    <url-pattern>/EditFoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByIdServlet</display-name>
+    <servlet-name>FindFoodByIdServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByIdServlet</servlet-name>
+    <url-pattern>/FindFoodByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByMyId</display-name>
+    <servlet-name>FindFoodByMyId</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByMyId</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByMyId</servlet-name>
+    <url-pattern>/FindFoodByMyId</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DelFoodServlet</display-name>
+    <servlet-name>DelFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.DelFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelFoodServlet</servlet-name>
+    <url-pattern>/DelFoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchFoodServlet</display-name>
+    <servlet-name>SearchFoodServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.SearchFoodServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchFoodServlet</servlet-name>
+    <url-pattern>/SearchFoodServlet</url-pattern>
+>>>>>>> refs/remotes/origin/master
   </servlet-mapping>
 </web-app>

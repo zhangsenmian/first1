@@ -29,7 +29,7 @@
 			bgColor="#f5fafe" border="0">
 			<TBODY>
 				<tr>
-					<td class="ta_01" align="center" bgColor="#afd1f3"><strong>查
+					<td class="ta_01" align="center" bgColor="#05C0A1"><strong>查
 							询 条 件</strong>
 					</td>
 				</tr>
@@ -90,7 +90,7 @@
 
 				</tr>
 				<tr>
-					<td class="ta_01" align="center" bgColor="#afd1f3"><strong>商店列表</strong>
+					<td class="ta_01" align="center" bgColor="#05C0A1"><strong>商店列表</strong>
 					</TD>
 				</tr>
 				<tr>
@@ -106,12 +106,13 @@
 							bordercolor="gray" border="1" id="DataGrid1"
 							style="BORDER-RIGHT: gray 1px solid; BORDER-TOP: gray 1px solid; BORDER-LEFT: gray 1px solid; WIDTH: 100%; WORD-BREAK: break-all; BORDER-BOTTOM: gray 1px solid; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #f5fafe; WORD-WRAP: break-word">
 							<tr
-								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #afd1f3">
+								style="FONT-WEIGHT: bold; FONT-SIZE: 12pt; HEIGHT: 25px; BACKGROUND-COLOR: #05C0A1">
 								<td align="center" width="24%">商店编号</td>
 								<td align="center" width="18%">商店名称</td>
 								<td align="center" width="9%">商品起送价格</td>
 								
 								<td width="8%" align="center">商店类别</td>
+								<td width="8%" align="center">商店首图</td>
 								<td width="8%" align="center">编辑</td>
 
 								<td width="8%" align="center">删除</td>
@@ -129,6 +130,9 @@
 										width="8%">${b.startprice }</td>
 									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 										width="8%">${b.category }</td>
+										
+									<td style="CURSOR: hand; HEIGHT: 22px" align="center"
+										width="8%"><img width="110px" height="50px" src="${pageContext.request.contextPath }/upload/${b.img_url}"></td>
 									
 									<td align="center" style="HEIGHT: 22px" width="7%"><a
 										href="${pageContext.request.contextPath }/servlet/FindShopByIdServlet?id=${b.id }">

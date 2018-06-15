@@ -25,7 +25,7 @@ public class ShopDao {
     
     public List<Shop> addShop(Shop shop) throws SQLException{
     	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
-    	qr.update("insert into Shop values(?,?,?,?,?)",shop.getId(),shop.getName(),shop.getCategory(),shop.getStartprice(),shop.getImg_url());
+    	qr.update("insert into Shop values(?,?,?,?,?,?)",shop.getId(),shop.getName(),shop.getCategory(),shop.getStartprice(),shop.getImg_url(),shop.getBusiness_id());
 		return null;
         
     }
@@ -36,10 +36,11 @@ public class ShopDao {
     	return qr.query("select * from Shop where id=?", new BeanHandler<Shop>(Shop.class),id);
     }
     
-    public void updateShop(Shop Shop) throws SQLException {
+    public void updateShop(Shop shop) throws SQLException {
 		QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
-		qr.update("update Shop set name=?,startprice=?,category=?img_url=?where id=?",
-				Shop.getName(),Shop.getStartprice(),Shop.getCategory(),Shop.getId(),Shop.getImg_url());
+		System.out.println(shop.getImg_url());
+		qr.update("update Shop set name=?,startprice=?,category=?,img_url=? where id=?",
+				shop.getName(),shop.getStartprice(),shop.getCategory(),shop.getImg_url(),shop.getId());
 		
 
 	}
@@ -129,6 +130,12 @@ public class ShopDao {
     	return qr.query("select * from Shop where category = ?", new BeanListHandler<Shop>(Shop.class),category);
     	
     }
+    
+    public List<Shop> findShopsByName(String name) throws SQLException{
+    	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+    	return qr.query("select * from Shop where name = ?", new BeanListHandler<Shop>(Shop.class),name);
+    }
+    
     /*
     public void delAllShops(String[] ids) throws SQLException{
     	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
@@ -140,6 +147,7 @@ public class ShopDao {
     	qr.batch("delete from Shop where id =?",params);
     }
     
+     */
     
    
 //    public List<Shop>  searchShop(String id,String category,String name,String minprice,String maxprice) throws SQLException{
@@ -177,7 +185,7 @@ public class ShopDao {
  
 	
 
-       
+       /*
 
 		  public List<Object> findShopsName(String name) throws SQLException{
 		    	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());

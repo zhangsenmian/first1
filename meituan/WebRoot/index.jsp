@@ -37,19 +37,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}"> 全部</a>
     </td> 
     <td width="60">     
-	      <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=美食"">美食</a>
+	      <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=1"">美食</a>
 	</td> 
 	    <td width="60">
-	      <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=超市">超市</a>
+	      <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=2">超市</a>
 	 </td>
 	 <td width="90">
-          <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=精选小吃"> 精选小吃</a>
+          <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=3"> 精选小吃</a>
     </td> 
     <td width="75">     
-	      <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=鲜果购">鲜果购</a>
+	      <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=4">鲜果购</a>
 	</td>  
 	<td width="75">     
-	     <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=下午茶">下午茶</a>
+	     <a href="${pageContext.request.contextPath  }/servlet/ShopsPageServlet?currentPage=${pb.currentPage==1?1:pb.currentPage-1}&category=5">下午茶</a>
 	</td> 
 	  </tr>
 	</table>

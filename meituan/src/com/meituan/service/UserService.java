@@ -25,7 +25,7 @@ public class UserService {
 		}
 	}
 	 public User findUserByUsernamePassword(String username,String password) throws UserException{
-		 User user;
+		 User user = new User();
 		 try {
 			 user= ud.findUserByUsernamePassword(username,password);
 			if(user==null){

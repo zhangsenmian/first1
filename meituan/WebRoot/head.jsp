@@ -26,9 +26,13 @@
     <a href="#">首页</a></td> <td width="144.5">
       <a href="#"> 我的订单</a></td> <td width="144.5">     
     <a href="adminregister.jsp">入驻加盟</a></td> <td >
+    <form action="${pageContext.request.contextPath}/FindShopByName"
+		method="post">
     <input id="divhead10" placeholder="搜索商家，美食" type="text" ></td> 
-    <td><img src="images/search1_.jpg" style="width="40" height="40"  />
+    <td><input type="image" src="images/search1_.jpg" border="0" width="40px" height="40px">
+   <!--  <img src="images/search1_.jpg" style="width="40" height="40"  /> -->
         </td>
+        </form>
       </tr>
     </table>
     </div>

@@ -47,6 +47,11 @@
 						<option value="下午茶">下午茶</option>
 				</select>
 				</td>
+				<td align="center" bgColor="#f5fafe" class="ta_01">商店店主id：</td>
+				<td class="ta_01" bgColor="#ffffff"><input type="text"
+					name="business_id" 
+					class="bg" />
+				</td>
 			</tr>
 
 
