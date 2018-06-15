@@ -42,9 +42,6 @@ a{text-decoration:none}
 }
 #divmid{
   width:980px;
-  /* background-color:yellow; */ /*设置背景色*/
-  height:370px;
-  margin-left:471px;
   margin-right:auto;  /*边界左自动，右自动是居中*/
   
   
