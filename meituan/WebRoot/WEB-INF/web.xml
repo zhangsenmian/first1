@@ -144,7 +144,6 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-
     <display-name>FindShopsByName</display-name>
     <servlet-name>FindShopsByName</servlet-name>
     <servlet-class>com.meituan.web.servlet.FindShopsByName</servlet-class>
@@ -179,8 +178,6 @@
     <servlet-name>AddFoodServlet</servlet-name>
     <servlet-class>com.meituan.web.servlet.AddFoodServlet</servlet-class>
   </servlet>
-  
-
    <servlet>
    <description></description>
     <display-name>BusinessRegistServlet</display-name>
@@ -261,10 +258,6 @@
     <servlet-name>JSONServlet3</servlet-name>
     <url-pattern>/JSONServlet3</url-pattern>
     </servlet-mapping>
-
-  
-  
-  
   <servlet-mapping>
     <servlet-name>AddFoodServlet</servlet-name>
     <url-pattern>/AddFoodServlet</url-pattern>
