@@ -18,18 +18,23 @@ public class LoginServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-	String username=request.getParameter("username");
-	String password=request.getParameter("password");
+	String username=request.getParameter("mobile");
+	String password=request.getParameter("code");
 	UserService us = new UserService();
 	User user;
 	try {
 		user = us.findUserByUsernamePassword(username, password);
-		String path="/index.jsp";
+	
+		String path="/servlet/ShopsPageServlet";
 		if("admin".equals(user.getUsername())){
 			path="/admin/login/home.jsp";
 		}
-		request.getSession().setAttribute("user", user);
-		request.getRequestDispatcher(path).forward(request, response);
+		if(user!=null){
+			request.getSession().setAttribute("user", user);
+		
+			request.getRequestDispatcher(path).forward(request, response);
+		}
+		
 		
 	} catch (UserException e) {
 		// TODO Auto-generated catch block

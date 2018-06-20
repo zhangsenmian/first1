@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          </div>
        <div id="divmid1">
        <br><br><br>
-       <form method="post" action="UserLoginServlet">
+       <form method="post" action="LoginServlet">
           <span id="divmid11">账号登录</span><br><br>
           <span><input id="login-mobile"  name="mobile" value="" placeholder="请输入登录登录用户名" type="text"></span><br><br>
           <span><input name="code" id="login-verify-code" autocomplete="off" value="" placeholder="请输入密码" type="password"></span><br><br>

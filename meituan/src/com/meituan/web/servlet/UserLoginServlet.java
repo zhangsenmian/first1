@@ -37,7 +37,7 @@ public class UserLoginServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		if(flag){
 			//登录成功
-			session.setAttribute("login", user);
+			/*request.getsession().setAttribute("user", user);*/
 			request.getRequestDispatcher("/servlet/ShopsPageServlet").forward(request, response);
 		}else{
 			request.getRequestDispatcher("/login.jsp").forward(request, response);

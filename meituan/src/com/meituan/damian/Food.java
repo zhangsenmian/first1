@@ -6,7 +6,32 @@ public class Food {
   private double foodprice;
   private String shopid;
   private String img_url;
-  public String getImg_url() {
+  
+  
+  @Override
+public int hashCode() {
+	final int prime = 31;
+	int result = 1;
+	result = prime * result + ((fid == null) ? 0 : fid.hashCode());
+	return result;
+}
+@Override
+public boolean equals(Object obj) {
+	if (this == obj)
+		return true;
+	if (obj == null)
+		return false;
+	if (getClass() != obj.getClass())
+		return false;
+	Food other = (Food) obj;
+	if (fid == null) {
+		if (other.fid != null)
+			return false;
+	} else if (!fid.equals(other.fid))
+		return false;
+	return true;
+}
+public String getImg_url() {
 	return img_url;
 }
 public void setImg_url(String img_url) {

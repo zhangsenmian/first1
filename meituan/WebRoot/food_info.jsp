@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/food_info.css" type="text/css" />
 
 <script type="text/javascript" src="/meituan/jquery/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="js/food_info.js"></script>
+
 
 
 </head>
@@ -110,7 +110,7 @@
   </div>
 
 <div class="shopping-cart clearfix">
-	   <form method="post" action="/order/shoppingcart" id="shoppingCartForm">
+	   <form method="post" action="/meituan/orderInfo.jsp" id="shoppingCartForm">
   	   <div class="order-list hideCart" style="top: -257px;">
   	   <div class="title">
        <span class="fl buy-title">购物车</span>
@@ -154,6 +154,6 @@
       <div id="gouwucar2"> <div id="gouwucar22">&nbsp;&nbsp;差20元起送 </div></div>
   </div>
 -->
+<script type="text/javascript" src="js/food_info.js"></script>
 </body>
 </html>
-

@@ -43,14 +43,16 @@
 
 												</tr>
 											</table>
+											
+									<form action="" method="post">
 									<c:forEach items="${order.orderItems }" var="o" varStatus="vs">
 											<table width="100%" border="0" cellspacing="0">
 												<tr>
-													<td width="10%">${vs.count }</td>
-													<td width="40%">${o.p.name }</td>
-													<td width="10%">${o.p.price }</td>
-													<td width="10%">${o.buynum }</td>
-													<td width="10%">${o.buynum * o.p.price }</td>
+													<td width="10%"><input name="" value="${vs.count }"></td>
+													<td width="40%"><input name="" value="${vs.count }">${o.p.name }</td>
+													<td width="10%"><input name="" value="${vs.count }">${o.p.price }</td>
+													<td width="10%"><input name="" value="${vs.count }">${o.buynum }</td>
+													<td width="10%"><input name="" value="${vs.count }">${o.buynum * o.p.price }</td>
 
 												</tr>
 											</table>
@@ -65,9 +67,9 @@
 											</table>
 
 											<p>
-												收货地址：${order.receiverAddress }&nbsp;&nbsp;&nbsp;&nbsp;<br />
-												收货人：&nbsp;&nbsp;&nbsp;&nbsp;${order.receiverName }&nbsp;&nbsp;&nbsp;&nbsp;<br />
-												联系方式：${order.receiverPhone }&nbsp;&nbsp;&nbsp;&nbsp;
+												收货地址：<input name="" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;<br />
+												收货人：&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;<br />
+												联系方式：<input name="" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
 
 											</p>
 											<hr>
@@ -78,6 +80,7 @@
 										</td>
 									</tr>
 								</table>
+								</form>
 							</td>
 
 

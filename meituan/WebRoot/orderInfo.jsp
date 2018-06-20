@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
@@ -25,10 +26,11 @@
 					<table cellspacing="0" class="infocontent">
 						<tr>
 							<td>
+							<p></p>
 								<table width="100%" border="0" cellspacing="0">
 									<tr>
 										<td>
-											<p>订单编号:001</p></td>
+											<p>用户:${user.id }</p></td>
 									</tr>
 									<tr>
 										<td>
@@ -42,26 +44,26 @@
 
 												</tr>
 											</table>
+						<form action="${pageContext.request.contextPath}/servlet/CreateOrderServlet "  method="post" name="orderform">
+											<c:forEach items="${cart }" var="entery" varStatus="vs">
+											
 											<table width="100%" border="0" cellspacing="0">
 												<tr>
-													<td width="10%">1</td>
-													<td width="40%">Thinking In Java</td>
-													<td width="10%">100</td>
-													<td width="10%">10</td>
-													<td width="10%">1000</td>
-
+													<td width="10%">${vs.count }</td>
+													
+													<td width="40%">${entery.key.foodname }</td>
+													
+													<td width="10%">${entery.key.foodprice }</td>
+													
+													<td width="10%">${entery.value }</td>
+													
+													<td width="10%">${entery.value*entery.key.foodprice }</td>
+													<input name="money" type="hidden" value="${entery.value*entery.key.foodprice }">
+                                                     <input name="state" type="hidden" value="0">
+                                                      <input name="useid" type="hidden" value="${user.id }">
 												</tr>
 											</table>
-											<table width="100%" border="0" cellspacing="0">
-												<tr>
-													<td width="10%">2</td>
-													<td width="40%">Thinking In Java</td>
-													<td width="10%">100</td>
-													<td width="10%">10</td>
-													<td width="10%">1000</td>
-
-												</tr>
-											</table>
+											</c:forEach>
 
 											<table cellspacing="1" class="carttable">
 												<tr>
@@ -71,19 +73,27 @@
 											</table>
 
 											<p>
-												收货地址：xxxx&nbsp;&nbsp;&nbsp;&nbsp;<br />
-												收货人：&nbsp;&nbsp;&nbsp;&nbsp;tom&nbsp;&nbsp;&nbsp;&nbsp;<br />
-												联系方式：13888888888&nbsp;&nbsp;&nbsp;&nbsp;
+													收货地址：<input name="receiverAddress" type="text" value="xxx"
+														style="width:350px" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"></a>
+													<br /> 收货人：&nbsp;&nbsp;&nbsp;&nbsp;<input
+														name="receiverName" type="text" value="xxx"
+														style="width:150px" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"></a>
+													<br /> 联系方式：<input type="text" name="receiverPhone"
+														value="xxx" style="width:150px" />&nbsp;&nbsp;&nbsp;&nbsp;
 
-											</p>
+												</p>
+												</form>
 											<hr>
 											<p style="text-align:right">
-												<a href="pay.jsp"><img src="images/gif53_029.gif" width="204"
-													height="51" border="0" /> </a>
+											<!-- 	<img src="images/gif53_029.gif" onclick="_submitOrder()"width="204"
+													height="51" border="0" /> -->
+													<input type="image" src="images/gif53_029.gif" border="0" width="204"
+													height="51"onclick="javascript:document.forms['orderform'].submit(); return false;">
 											</p>
 										</td>
 									</tr>
 								</table>
+								
 							</td>
 
 
@@ -95,7 +105,11 @@
 			</tr>
 		</table>
 	</div>
-
+<script type="text/javascript">
+function _submitOrder(){
+          document.getElementById("orderform").submit();
+}
+</script>
 
 
 	<jsp:include page="foot.jsp" />

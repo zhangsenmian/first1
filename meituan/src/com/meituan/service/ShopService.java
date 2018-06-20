@@ -66,35 +66,6 @@ public class ShopService {
 	return null;
    }
    
-   public List<Object> searchShopByName(String name){
-	   try {
-		return shopDao.searchShopByName(name);
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	return null;
-   }
-   
-   public PageBean searchAllShopByName(int currentPage,int pageSize,String name){
-	   try {
-			int count=shopDao.count2(name);
-			int totalPage=(int) Math.ceil(count*1.0/pageSize);
-			List<Shop> list=shopDao.searchAllShopByName(currentPage, pageSize, name);
-			System.out.println(list);
-			PageBean pb=new PageBean();
-			pb.setShops(list);
-			pb.setCount(count);
-			pb.setCurrentPage(currentPage);
-			pb.setPageSize(pageSize);
-			pb.setTotalPage(totalPage);
-			return pb;
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return null;
-   }
   /* public PageBean findShopsPage(int currentPage, int pageSize) {
 		// TODO Auto-generated method stub
 		try {
@@ -180,4 +151,9 @@ public List<Object> findShopsName(String name){
 	return null;
 }
 */
+
+public PageBean searchAllShopByName(int currentPage, int pageSize, String name) {
+	// TODO Auto-generated method stub
+	return null;
+}
 }

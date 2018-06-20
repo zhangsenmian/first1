@@ -392,6 +392,34 @@
     <servlet-name>DelUserServlet</servlet-name>
     <servlet-class>com.meituan.web.servlet.DelUserServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>cartFood</servlet-name>
+    <servlet-class>com.meituan.web.servlet.cartFood</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindOrderByUserId</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindOrderByUserId</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.CreateOrderServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CreateOrdServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.CreateOrdServlet</servlet-class>
+  </servlet>
+
+
+
+
 
 
 
@@ -415,5 +443,21 @@
   <servlet-mapping>
     <servlet-name>DelUserServlet</servlet-name>
     <url-pattern>/servlet/DelUserServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>cartFood</servlet-name>
+    <url-pattern>/cartFood</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindOrderByUserId</servlet-name>
+    <url-pattern>/servlet/FindOrderByUserId</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <url-pattern>/servlet/CreateOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateOrdServlet</servlet-name>
+    <url-pattern>/servlet/CreateOrdServlet</url-pattern>
   </servlet-mapping>
 </web-app>
