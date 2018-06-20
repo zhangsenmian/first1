@@ -4,9 +4,9 @@ a{text-decoration:none}
 #divmain{
   width:1292.67px;
   height: 607px;
-    background-color:#FFFFFF;/*设置背景色*/
+    background-color:#FFFFFF;/*璁剧疆鑳屾櫙鑹�*/
   margin-left:auto;
-  margin-right:auto;  /*边界左自动，右自动是居中*/
+  margin-right:auto;  /*杈圭晫宸﹁嚜鍔紝鍙宠嚜鍔ㄦ槸灞呬腑*/
   
 }
 
@@ -21,7 +21,7 @@ a{text-decoration:none}
   /* background-color:green;*/
   height:53px;
   margin-left:40px;
-  margin-right:auto;  /*边界左自动，右自动是居中*/
+  margin-right:auto;  /*杈圭晫宸﹁嚜鍔紝鍙宠嚜鍔ㄦ槸灞呬腑*/
     padding-top:5px;
     float: left;
 }
@@ -29,7 +29,7 @@ a{text-decoration:none}
   width:277px;
   /* background-color:green;*/
   height:22px;
-  margin-right:auto;  /*边界左自动，右自动是居中*/
+  margin-right:auto;  /*杈圭晫宸﹁嚜鍔紝鍙宠嚜鍔ㄦ槸灞呬腑*/
     padding-top:20px;
     float: left;
     color: white;
@@ -42,14 +42,14 @@ a{text-decoration:none}
 }
 #divmid{
   width:980px;
-  margin-right:auto;  /*边界左自动，右自动是居中*/
-  
+  margin-right:auto;  /*杈圭晫宸﹁嚜鍔紝鍙宠嚜鍔ㄦ槸灞呬腑*/
+  margin-left:450px;
   
 }
 
 #divmid1{
   width:270px;
-  /* background-color:red; *//*设置背景色*/
+  /* background-color:red; *//*璁剧疆鑳屾櫙鑹�*/
   height:370px;
  
   margin-left:115px;
@@ -84,7 +84,7 @@ a{text-decoration:none}
           /* background-color:green;*/
           height:18px;
           margin-left:141px;
-          margin-right:auto;  /*边界左自动，右自动是居中*/
+          margin-right:auto;  /*杈圭晫宸﹁嚜鍔紝鍙宠嚜鍔ㄦ槸灞呬腑*/
             padding-top:50px;
 }
 #footfont{

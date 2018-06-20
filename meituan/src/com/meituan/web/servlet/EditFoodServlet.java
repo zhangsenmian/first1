@@ -84,7 +84,7 @@ public class EditFoodServlet extends HttpServlet {
 					System.out.println(filename);
 					//锟侥硷拷锟较达拷 
 					fileItem.write(new File(storeDirectory,filename));
-					fileItem.delete();	//删锟斤拷锟斤拷时锟侥硷拷
+					
 					
 					}
 					map.put(fileItem.getFieldName(),new String[]{filename});//锟斤拷图片锟�?锟斤拷锟絥ame锟斤拷value锟斤拷锟芥到map锟斤拷
@@ -98,9 +98,10 @@ public class EditFoodServlet extends HttpServlet {
 			
 			FoodService bs = new FoodService();
 			bs.updateFood(food);
-			
+			String Shopid=food.getShopid();
+			request.setAttribute("id",Shopid);
 						
-			request.getRequestDispatcher("FindAllShopsTwoServlet").forward(request, response);
+			request.getRequestDispatcher("FindFoodByidTwoServlet").forward(request, response);
 		} catch (FileUploadException e) {
 			e.printStackTrace();
 		} catch (Exception e) {

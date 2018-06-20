@@ -30,6 +30,7 @@ public class FindFoodByid extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id=request.getParameter("id");
+	
 		System.out.println(id);
 		FoodService ss = new FoodService();
 		List<Food> list = ss.findFoodByid(id);

@@ -29,21 +29,29 @@ public class BusinessRegistServlet extends HttpServlet {
 			//获取商家数据：
 			BeanUtils.populate(business, request.getParameterMap());
 			//设置商家id号
+
+			String Business_id=UUIDUtil.getUUID();
+			business.setBusiness_id(Business_id);
+
 			String business_id =  UUIDUtil.getUUID();
 			business.setBusiness_id(business_id);
 			shop.setBusiness_id(business_id);
+
 			//设置商店id号
+			
 			String shop_id = UUIDUtil.getUUID();
 			shop.setId(shop_id);
 			business.setShop_id(shop_id);
 			String shopname = request.getParameter("business_shopname");
 			shop.setName(shopname);
+			
 			BusinessShopService bShopService = new BusinessShopService();
 			BusinessSerice bSerice = new BusinessSerice();
 			bSerice.regist(business);
 			bShopService.regist(shop.getId(),shop.getName());
-			request.getRequestDispatcher("/registersuccess.jsp").forward(request, response);
-			//request.getRequestDispatcher("/adminlogin").forward(request, response);
+			request.setAttribute("shop_id", shop_id);
+			request.getRequestDispatcher("/businessadmin/food/businessshopedit.jsp").forward(request, response);
+			//request.getRequestDispatcher("/businessadmin/food/businessshopedit.jsp").forward(request, response);
 		} catch (Exception e) {
 			request.getRequestDispatcher("/adminlogin").forward(request, response);
 			e.printStackTrace();

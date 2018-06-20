@@ -178,8 +178,8 @@
     <servlet-name>AddFoodServlet</servlet-name>
     <servlet-class>com.meituan.web.servlet.AddFoodServlet</servlet-class>
   </servlet>
-   <servlet>
-   <description></description>
+  <servlet>
+    <description></description>
     <display-name>BusinessRegistServlet</display-name>
     <servlet-name>BusinessRegistServlet</servlet-name>
     <servlet-class>com.meituan.web.servlet.BusinessRegistServlet</servlet-class>
@@ -257,7 +257,7 @@
   <servlet-mapping>
     <servlet-name>JSONServlet3</servlet-name>
     <url-pattern>/JSONServlet3</url-pattern>
-    </servlet-mapping>
+  </servlet-mapping>
   <servlet-mapping>
     <servlet-name>AddFoodServlet</servlet-name>
     <url-pattern>/AddFoodServlet</url-pattern>
@@ -311,5 +311,109 @@
   <servlet-mapping>
     <servlet-name>SearchFoodServlet</servlet-name>
     <url-pattern>/SearchFoodServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByIdHomeServlet</display-name>
+    <servlet-name>FindFoodByIdHomeServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByIdHomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByIdHomeServlet</servlet-name>
+    <url-pattern>/FindFoodByIdHomeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EditShopBusinessServlet</display-name>
+    <servlet-name>EditShopBusinessServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.EditShopBusinessServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditShopBusinessServlet</servlet-name>
+    <url-pattern>/EditShopBusinessServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodBusByIdServlet</display-name>
+    <servlet-name>FindFoodBusByIdServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodBusByIdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodBusByIdServlet</servlet-name>
+    <url-pattern>/FindFoodBusByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByidTwoServlet</display-name>
+    <servlet-name>FindFoodByidTwoServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByidTwoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByidTwoServlet</servlet-name>
+    <url-pattern>/FindFoodByidTwoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByIdBusServlet</display-name>
+    <servlet-name>FindFoodByIdBusServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByIdBusServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindFoodByIdBusServlet</servlet-name>
+    <url-pattern>/FindFoodByIdBusServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindFoodByidTwoBusServlet</display-name>
+    <servlet-name>FindFoodByidTwoBusServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindFoodByidTwoBusServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchShopByNameServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.SearchShopByNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SearchAllShopByNameServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.SearchAllShopByNameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindAllUserServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.FindAllUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelUserServlet</servlet-name>
+    <servlet-class>com.meituan.web.servlet.DelUserServlet</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>FindFoodByidTwoBusServlet</servlet-name>
+    <url-pattern>/FindFoodByidTwoBusServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchShopByNameServlet</servlet-name>
+    <url-pattern>/servlet/SearchShopByNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchAllShopByNameServlet</servlet-name>
+    <url-pattern>/servlet/SearchAllShopByNameServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAllUserServlet</servlet-name>
+    <url-pattern>/servlet/FindAllUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelUserServlet</servlet-name>
+    <url-pattern>/servlet/DelUserServlet</url-pattern>
   </servlet-mapping>
 </web-app>

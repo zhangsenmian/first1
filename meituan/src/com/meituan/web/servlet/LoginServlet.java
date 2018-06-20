@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet {
 	try {
 		user = us.findUserByUsernamePassword(username, password);
 		String path="/index.jsp";
-		if("admin".equals(user.getRole())){
+		if("admin".equals(user.getUsername())){
 			path="/admin/login/home.jsp";
 		}
 		request.getSession().setAttribute("user", user);
@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 		request.setAttribute("login_msg",e.getMessage());
-		request.getRequestDispatcher("/login.jsp").forward(request, response);
+		request.getRequestDispatcher("login.jsp").forward(request, response);
 	}
 	
 	}

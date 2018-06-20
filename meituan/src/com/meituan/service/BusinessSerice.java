@@ -11,13 +11,9 @@ public class BusinessSerice {
 	public void regist(Business business) throws Exception {
 		bdBusinessDao.regist(business);
 	}
-	public String  checkName(Business bs) throws Exception {
-		String flag = null;
-		List<Business> list = bdBusinessDao.checkName(bs);
-		for(Business bs1 : list){
-			flag = bs1.getShop_id();
-		}
-		return flag;
+	public Business  checkName(Business bs) throws Exception {
+
+		return bdBusinessDao.checkName(bs);
 		
 	}
 	public String checkRegister(String username) throws Exception {

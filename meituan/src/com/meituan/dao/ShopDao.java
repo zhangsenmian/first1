@@ -105,6 +105,17 @@ public class ShopDao {
     		return qr.query(sql, new BeanListHandler<Shop>(Shop.class),(currentPage-1)*pageSize,pageSize);
     	}
     }
+    
+    //搜索中的shop
+    public List<Shop> searchAllShopByName(int currentPage,int pageSize,String name) throws SQLException{
+    	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+    	String sql="";
+    		sql="select * from Shop where name like? limit ?,?";
+    	   return qr.query(sql, new BeanListHandler<Shop>(Shop.class),"%"+name+"%",(currentPage-1)*pageSize,pageSize);
+    	
+    }
+    
+    
 
 	public int count(String category) throws SQLException {
 		QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
@@ -117,12 +128,16 @@ public class ShopDao {
     		l = (Long) qr.query("select count(*) from Shop ",new ScalarHandler(1));
 			return (int)l;
     	}
-	         
-			
+	       
+	}
 	
-		
-		
 	
+    	public int count2(String name) throws SQLException {
+    		QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+    		long l;
+        		l = (Long) qr.query("select count(*) from Shop  where name like ?",new ScalarHandler(1),name);
+    			return (int)l;
+
 	}
 	
     public List<Shop> findCategory(String category) throws SQLException{
@@ -136,6 +151,15 @@ public class ShopDao {
     	return qr.query("select * from Shop where name = ?", new BeanListHandler<Shop>(Shop.class),name);
     }
     
+
+    
+	public List<Object> searchShopByName(String name) throws SQLException {
+		
+		QueryRunner qr = new QueryRunner(C3P0Util.getDataSource());
+		return qr.query("select name from shop where name like ?", new ColumnListHandler(),"%"+name+"%");
+	}
+	
+	
     /*
     public void delAllShops(String[] ids) throws SQLException{
     	QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());

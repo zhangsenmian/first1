@@ -88,7 +88,7 @@ public class EditShopServlet extends HttpServlet {
 					System.out.println(filename);
 					//锟侥硷拷锟较达拷 
 					fileItem.write(new File(storeDirectory,filename));
-					fileItem.delete();	//删锟斤拷锟斤拷时锟侥硷拷
+				
 					
 					}
 					map.put(fileItem.getFieldName(),new String[]{filename});//锟斤拷图片锟�?锟斤拷锟絥ame锟斤拷value锟斤拷锟芥到map锟斤拷

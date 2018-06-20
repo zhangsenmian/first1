@@ -26,10 +26,11 @@
     <a href="#">首页</a></td> <td width="144.5">
       <a href="#"> 我的订单</a></td> <td width="144.5">     
     <a href="adminregister.jsp">入驻加盟</a></td> <td >
-    <form action="${pageContext.request.contextPath}/FindShopByName"
+    <form name="Form_2" action="${pageContext.request.contextPath}/servlet/SearchAllShopByNameServlet"
 		method="post">
-    <input id="divhead10" placeholder="搜索商家，美食" type="text" ></td> 
-    <td><input type="image" src="images/search1_.jpg" border="0" width="40px" height="40px">
+    <input id="divhead10" name="name" placeholder="搜索商家，美食" type="text" ></td> 
+    <td><input type="image" src="images/search1_.jpg" border="0" width="40px" height="40px" onclick="javascript:document.forms['Form_2'].submit(); return false;">
+    
    <!--  <img src="images/search1_.jpg" style="width="40" height="40"  /> -->
         </td>
         </form>
@@ -37,4 +38,7 @@
     </table>
     </div>
   </div>
+  
+  
+  
 

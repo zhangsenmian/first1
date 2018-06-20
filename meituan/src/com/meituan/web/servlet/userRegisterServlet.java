@@ -43,7 +43,7 @@ public class userRegisterServlet extends HttpServlet {
 			flag = us.regist(user);
 			if(flag){
 				//注册成功
-				request.getRequestDispatcher("/registersuccess.jsp").forward(request, response);
+				request.getRequestDispatcher("/login.jsp").forward(request, response);
 			}else{
 				//注册失败
 				request.getRequestDispatcher("/register.jsp").forward(request, response);

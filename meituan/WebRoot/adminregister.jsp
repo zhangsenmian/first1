@@ -95,8 +95,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
           <form method="post" action="BusinessRegistServlet" onsubmit="return check()">
           <span><input class="login-mobile" id="name" name="business_name" value="" placeholder="请输入用户名" type="text"></span><span id="check"></span><br><br>
           <span><input name="business_password" id="login-verify-code" autocomplete="off" value="" placeholder="请输入密码" type="password"></span><br><br>
-          <span><input class="login-mobile" id="shopname" name="business_shopname" value="" placeholder="请输入店铺名" type="text"></span><br><br>
-          <span><input id="btn" name="" value="同意并注册" type="submit" ></span><br><br>
+          <span><input class="login-mobile" id="shopname" name="business_shopname" value="" placeholder="请输入店铺名" type="text"></span><br><br>         
+           <span><input id="btn" name="" value="同意并注册" type="submit" ></span><br><br>
            <span id="divmid13">已同意《美团网用户协议》</span><br><br>
            </form>
           </div> 

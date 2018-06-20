@@ -25,13 +25,13 @@
 		d.add(0,-1,'系统菜单树');
 		d.add(1,0,'商店管理','/meituan/admin/login/welcome.jsp','','mainFrame');
 		d.add(2,0,'商品管理','/meituan/admin/login/welcome.jsp','','mainFrame');
-		d.add(3,0,'订单管理','/meituan/admin/login/welcome.jsp','','mainFrame');
+		d.add(3,0,'用户管理','/meituan/admin/login/welcome.jsp','','mainFrame');
 		
 		
 		//子目录添加
 		d.add(11,1,'商店查看','${pageContext.request.contextPath}/servlet/FindAllShopsServlet','','mainFrame');
 		d.add(11,2,'商品查看','${pageContext.request.contextPath}/FindAllShopsTwoServlet','','mainFrame');
-		d.add(12,1,'销售榜单','/meituan/admin/products/download.jsp','','mainFrame')
+		d.add(11,3,'用户查看','${pageContext.request.contextPath}/servlet/FindAllUserServlet','','mainFrame')
 		
 		d.add(21,2,'订单查看','/meituan/admin/orders/list.jsp','','mainFrame');
 	

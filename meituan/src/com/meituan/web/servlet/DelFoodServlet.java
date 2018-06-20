@@ -29,7 +29,9 @@ public class DelFoodServlet extends HttpServlet {
 		  String id=request.getParameter("id");
           FoodService ss=new FoodService();
           ss.deleteFood(id);
-		request.getRequestDispatcher("FindAllShopsTwoServlet").forward(request, response);
+          String shopid=(String)request.getSession().getAttribute("shopid");
+          request.setAttribute("id",  shopid);
+		request.getRequestDispatcher("FindFoodByidTwoServlet").forward(request, response);
 	}
 
 	/**

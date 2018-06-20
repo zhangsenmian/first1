@@ -60,6 +60,7 @@ public class AddFoodServlet extends HttpServlet {
 							//锟斤拷通锟�?锟斤拷
 							String name = fileItem.getFieldName();//得到字段名
 							String value = fileItem.getString("UTF-8");//得到值
+							
 							map.put(name, new String[]{value});//锟斤拷map锟叫革拷值
 							
 						}else{
@@ -94,12 +95,13 @@ public class AddFoodServlet extends HttpServlet {
 					BeanUtils.populate(food, map);
 					food.setFid(UUIDUtil.getUUID());//锟斤拷锟斤拷图锟斤拷锟斤拷
 					
-					
+				
 					FoodService bs = new FoodService();
 					bs.addFood(food);
-					
+					String Shopid=food.getShopid();
+					request.setAttribute("id",Shopid);
 								
-					request.getRequestDispatcher("FindAllShopsTwoServlet").forward(request, response);
+					request.getRequestDispatcher("FindFoodByidTwoServlet").forward(request, response);
 				} catch (FileUploadException e) {
 					e.printStackTrace();
 				} catch (Exception e) {

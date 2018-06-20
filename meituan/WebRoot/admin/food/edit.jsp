@@ -33,11 +33,13 @@
 		 enctype="multipart/form-data">
 		<input type="hidden"
 					           name="fid"  value="${food.fid }" />
+			<input type="hidden"
+					           name="shopid"  value="${food.shopid }" />		           
 <!--	enctype="multipart/form-data"  --><!--   图片加上-->
 <table cellSpacing="1" cellPadding="5" width="100%" align="center"
 			bgColor="#eeeeee" style="border: 1px solid #8ba7e3" border="0">
 			<tr>
-				<td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
+				<td class="ta_01" align="center" bgColor="#05C0A1" colSpan="4"
 					height="26"><strong><STRONG>编辑商店</STRONG> </strong></td>
 			</tr>
 

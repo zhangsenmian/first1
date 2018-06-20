@@ -23,17 +23,18 @@ public class BusinessLoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//获取数据
 		request.setCharacterEncoding("utf-8");
-		String shopname=null;
+		
 		Business bs = new Business();
 		try {
 			BeanUtils.populate(bs, request.getParameterMap());
 			//调用模型
 			BusinessSerice bSerice = new BusinessSerice();
-			shopname = bSerice.checkName(bs);
+			bs = bSerice.checkName(bs);
 			
-			if(shopname!=null){
-				request.setAttribute("shopname", shopname);
-				request.getRequestDispatcher("/bsLoginsuss.jsp").forward(request, response);
+			if(bs!=null){
+				request.getSession().setAttribute("shop_id", bs.getShop_id());
+				request.getSession().setAttribute("shop_name", bs.getBusiness_shopname());
+				request.getRequestDispatcher("/businessadmin/login/home.jsp").forward(request, response);
 			}else{
 				request.getRequestDispatcher("/adminlogin.jsp").forward(request, response);
 			}

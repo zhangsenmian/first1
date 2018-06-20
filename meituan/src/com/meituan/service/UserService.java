@@ -14,6 +14,7 @@ public class UserService {
 		try {
 			int i =0;
 			i = ud.addUser(user);
+		
 			if(i==1){
 				return true;
 			}else{
@@ -24,6 +25,27 @@ public class UserService {
 			throw new UserException("注册失败");
 		}
 	}
+	
+	
+	public List<User> findAllUser(){
+		try {
+			return ud.findAllUsers();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	 public void deleteUser(String id){
+		 try {
+			ud.deleteUser(id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	 }
+	
 	 public User findUserByUsernamePassword(String username,String password) throws UserException{
 		 User user = new User();
 		 try {
