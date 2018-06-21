@@ -30,9 +30,7 @@ public class BusinessRegistServlet extends HttpServlet {
 			BeanUtils.populate(business, request.getParameterMap());
 			//设置商家id号
 
-			String Business_id=UUIDUtil.getUUID();
-			business.setBusiness_id(Business_id);
-
+			
 			String business_id =  UUIDUtil.getUUID();
 			business.setBusiness_id(business_id);
 			shop.setBusiness_id(business_id);
